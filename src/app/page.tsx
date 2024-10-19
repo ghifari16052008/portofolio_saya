@@ -1,8 +1,6 @@
 // app/page.tsx
-
-import Footer from "@/components/layouts/footer/page";
-import Card from "@/components/fragments/card/page";
 import '@/style/styles.css';
+
 // import Navbar from "@/components/layouts/navbar/page";
 
 const AnimatedText = ({ text }: { text: string }) => {
@@ -23,13 +21,14 @@ const AnimatedText = ({ text }: { text: string }) => {
   );
 };
 
+
+
 export default function Home() {
   return (
     <>
     
       <div className="bg-slate-500 text-white min-h-screen">
-        {/* Profile */}
-
+       
         <div className="relative flex flex-col items-center justify-center h-screen bg-black overflow-hidden">
           {/* <img
             alt="..."
@@ -42,7 +41,10 @@ export default function Home() {
           
         </div>
         {/* Riwayat Pendidikan */}
-        <h2 className="text-center mt-6 text-3xl font-semibold" data-aos="fade-up" data-aos-anchor-placement="center-bottom">Education</h2>
+        <div data-aos="fade-up">
+        <h2 className="text-center mt-6 text-3xl font-semibold" >Education</h2>
+        </div>
+        
         <ul className="timeline timeline-item-left timeline-snap-icon max-md:timeline-compact timeline-vertical">
           <li>
             <hr className="border-white" />

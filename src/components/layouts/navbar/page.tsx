@@ -1,6 +1,6 @@
-// components/layouts/navbar/page.tsx
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [bgColor, setBgColor] = useState("bg-black");
@@ -13,19 +13,21 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
+  const handleGalleryClick = () => {
+    alert("Halaman Galery Belum siap Guys");
+  };
+
   useEffect(() => {
     const handleScroll = () => {
-      // Change navbar background based on scroll position
       if (window.scrollY > 50) {
-        setBgColor("bg-white text-black"); // Change to white with black text
+        setBgColor("bg-white text-black");
       } else {
-        setBgColor("bg-black text-white"); // Change back to black with white text
+        setBgColor("bg-black text-white");
       }
     };
 
     window.addEventListener("scroll", handleScroll);
     
-    // Clean up event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -62,12 +64,12 @@ const Navbar = () => {
           <ul className="flex flex-col items-start justify-center space-y-2">
             <h2 className="font-semibold mb-2 text-lg">Menu</h2>
             <li>
-              <a href="/about" onClick={closeMenu} className="block text-md hover:bg-gray-700 p-1 transition-colors">
+              <a href="/tentang_ghifari" onClick={closeMenu} className="block text-md hover:bg-gray-700 p-1 transition-colors">
                 About
               </a>
             </li>
             <li>
-              <a href="#services" onClick={closeMenu} className="block text-md hover:bg-gray-700 p-1 transition-colors">
+              <a href="#" onClick={(e) => { e.preventDefault(); handleGalleryClick(); closeMenu(); }} className="block text-md hover:bg-gray-700 p-1 transition-colors">
                 My Gallery
               </a>
             </li>
@@ -77,8 +79,8 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="#gallery" onClick={closeMenu} className="block text-md hover:bg-gray-700 p-1 transition-colors">
-                Gallery
+              <a href="/projectGoals" onClick={closeMenu} className="block text-md hover:bg-gray-700 p-1 transition-colors">
+               Goals Project
               </a>
             </li>
           </ul>

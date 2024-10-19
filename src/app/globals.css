@@ -2,22 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body.synthwave-theme {
+  background-color: #2d2f3b; /* Contoh warna untuk synthwave */
+  color: #f8e71c;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark .toggle:checked {
+  background-color: #f8e71c; /* Warna saat toggle dalam mode synthwave */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.theme-controller {
+  accent-color: #f8e71c; /* Warna toggle checkbox */
+}
+
+body.synthwave-theme {
+  background-color: #2c1a6a; /* Warna latar belakang */
+  color: #e1e1e1; /* Warna teks */
+}
+
+.navbar {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 @layer utilities {
