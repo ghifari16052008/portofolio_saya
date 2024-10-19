@@ -64,7 +64,7 @@ const AboutPage = () => {
           <h2 className="text-xl font-semibold mt-4 text-gray-200">Contact Me:</h2>
           <p className="text-gray-300 mt-2">Email: fauzighifari5@gmail.com</p>
           <p className="text-gray-300">
-           Profile :{" "}
+           Profile:{" "}
             <a href="#" onClick={toggleMenu} className="text-blue-400 hover:underline">
             get to know me farr
             </a>
