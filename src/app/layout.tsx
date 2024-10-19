@@ -1,6 +1,9 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/layouts/navbar/page"; // Pastikan jalur import benar
+import Footer from "@/components/layouts/footer/page"; // Jika ada footer juga
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,10 +28,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <div className="flex flex-col min-h-screen">
+          <Navbar /> {/* Navbar ditampilkan di sini */}
+          <main className="flex-grow">
+            {children} {/* Konten halaman yang dirender */}
+          </main>
+          <Footer /> {/* Footer ditampilkan di sini */}
+        </div>
       </body>
     </html>
   );

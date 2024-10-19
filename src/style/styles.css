@@ -1,0 +1,41 @@
+@keyframes textMove {
+    0% {
+      transform: translateX(-100%);
+      background-position: -200% 0; /* Start background gradient from left */
+    }
+    50% {
+      transform: translateX(0);
+      background-position: 100% 0; /* Move to the center */
+    }
+    100% {
+      transform: translateX(100%);
+      background-position: 200% 0; /* End background gradient to the right */
+    }
+  }
+  
+  .animate-textMove {
+    display: inline-block; /* Ensure the text remains inline for smooth movement */
+    animation: textMove 5s linear infinite; /* Adjust duration as needed */
+    background-size: 200% 100%; /* Double the background size for smooth animation */
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px); /* Bergerak dari atas */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* Kembali ke posisi awal */
+    }
+  }
+  
+  .animate-fadeIn {
+    display: inline-block; /* Agar setiap huruf tidak terpengaruh oleh huruf lainnya */
+    animation: fadeIn 0.5s forwards; /* Durasi animasi */
+    opacity: 0; /* Untuk mengatur opacity awal */
+  }
+  
+  .custom-font-size {
+    font-size: 3rem; /* Sesuaikan ukuran sesuai kebutuhan */
+  }
