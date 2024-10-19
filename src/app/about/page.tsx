@@ -15,7 +15,7 @@ const AboutPage = () => {
           <h2 className="text-xl font-semibold mt-4">Social Media</h2>
           <ul className="mt-2">
             <li className="text-blue-500 hover:underline"><a href="https://twitter.com/yourprofile">Twitter</a></li>
-            <li className="text-blue-500 hover:underline"><a href="https://github.com/yourprofile">GitHub</a></li>
+            <li className="text-blue-500 hover:underline"><a href="https://github.com/ghifari16052008">GitHub</a></li>
           </ul>
         </div>
 
