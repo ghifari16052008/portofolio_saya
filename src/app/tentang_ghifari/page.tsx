@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from 'next/image';
 const AboutPage = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 bg-opacity-90">
@@ -32,11 +32,14 @@ const AboutPage = () => {
         {/* Main Content */}
         <div className="flex-1 bg-white shadow-lg rounded-lg p-8 max-w-md w-full mx-auto border border-gray-200">
           <h1 className="text-3xl font-bold text-center mb-4 text-gray-800">About Me</h1>
-          <img
-            src="https://example.com/new-profile-image.jpg" // Ganti dengan URL gambar profil Anda yang baru
-            alt="Profile"
-            className="rounded-full mx-auto w-32 mb-4 border border-gray-300 shadow-md"
+           <div className="rounded-full overflow-hidden w-32 h-32 mx-auto border border-gray-300 shadow-md">
+          <Image
+            src="/images/gambar.jpg" // Ganti dengan URL gambar
+            alt="External Image"
+            width={500}
+            height={300}
           />
+          </div>
           <p className="text-gray-700 text-center">
             Hi! I&apos;m [Muhammad Ghifari Fauzi], a passionate developer with a love for creating
             intuitive and dynamic user experiences. language programing with
