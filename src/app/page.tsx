@@ -49,7 +49,7 @@ export default function Home() {
               { name: "React", img: "/images/react.png" },
               { name: "Next.js", img: "/images/nextjs.png" },
               { name: "Node.js", img: "/images/nodejs.png" },
-              { name: "Tailwind CSS", img: "/images/tailwindcss.png" }
+              { name: "Tailwind ", img: "/images/tailwindcss.png" }
             ].map(({ name, img }) => (
               <div className="relative group m-2" key={name}>
                 <span className="bg-slate-600 text-white py-2 px-4 rounded-lg">{name}</span>
