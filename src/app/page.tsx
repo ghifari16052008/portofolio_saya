@@ -1,7 +1,6 @@
 // app/page.tsx
 import '@/style/styles.css';
 import Image from 'next/image';
-import Link from 'next/link';
 
 const AnimatedText = ({ text }: { text: string }) => {
   const letters = text.split('');
